@@ -12,6 +12,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+      - run: rm -rf android
       - run: flutter create . --platforms=android
       - run: flutter pub upgrade --major-versions
       - run: flutter build apk --release
